@@ -1,0 +1,67 @@
+{% extends 'store/main.html' %}
+
+
+{% block content %}
+<body>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Pricing</h1>
+  <p class="lead">Become our Member at different prices, feel free to join us.
+  THANK YOU !!!
+  </p>
+</div>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Free</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">0 ₹<small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>1.Can view our daily blogs</li>
+          <li>2.can learn basics of language</li>
+          <li>3.Email support</li>
+          <li>4.Help center access</li>
+        </ul>
+        <button type="button"  data-toggle="modal" data-target="#signupModal" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pro</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">99₹ <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>1.can view blog and comment</li>
+          <li>2.can learn the advance level language</li>
+          <li>3.Priority email support</li>
+          <li>4.Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">join us at @99RS</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">499₹ <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>1.can view, comment and add blog to our Blog Page</li>
+          <li>2.learn everything</li>
+          <li>3.Phone and email support</li>
+          <li>4.premium access to our community</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+</body>
+
+{% endblock %}

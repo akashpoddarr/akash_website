@@ -1,0 +1,55 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<!--marquee code starts here-->
+{% if user.is_authenticated %}
+{% else %}
+<marquee>You have to Login before buying !!!</marquee>
+{% endif %}
+<!--marquee code ends here-->
+
+	<div class="row">
+		{% for product in products %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{product.imageURL}}">
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
+
+				<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart<i style="font-size:24px" class="fa">&#xf07a;</i></button>
+
+				<a class="btn btn-outline-success" href="/cart">View Cart</a>
+				<h4 style="display: inline-block; "><strong>₹{{product.price}}</strong></h4>
+
+			</div>
+		</div>
+		{% endfor %}
+
+
+	</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<!--pagination code starts here-->
+<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+
+      <a class="page-link" href="?page=1" tabindex="-1">1</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+    <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
+    <li class="page-item"><a class="page-link" href="?page=5">5</a></li>
+    <li class="page-item"><a class="page-link" href="?page=6">6</a></li>
+    <li class="page-item"><a class="page-link" href="?page=7">7</a></li>
+    <li class="page-item"><a class="page-link" href="?page=8">8</a></li>
+  </ul>
+</nav>
+
+</nav>
+<!--pagination code ends here-->
+
+
+
+
+{% endblock content %}
